@@ -545,6 +545,28 @@ public final class BLEManager: NSObject, ObservableObject {
     ]
     static let heartRateService = CBUUID(string: "180D")
     static let heartRateChar    = CBUUID(string: "2A37") // HR + R-R (works unbonded)
+    // MARK: - Loop Watch
+
+static let loopUARTService = CBUUID(
+    string: "6E400001-B5A3-F393-E0A9-E50E24DCCA9E"
+)
+
+static let loopUARTRX = CBUUID(
+    string: "6E400002-B5A3-F393-E0A9-E50E24DCCA9E"
+)
+
+static let loopUARTTX = CBUUID(
+    string: "6E400003-B5A3-F393-E0A9-E50E24DCCA9E"
+)
+
+static let loopHealthService = CBUUID(string: "AE00")
+static let loopHealthWrite = CBUUID(string: "AE01")
+static let loopHealthNotify = CBUUID(string: "AE02")
+
+static let loopSyncService = CBUUID(string: "FEE7")
+static let loopSyncChar1 = CBUUID(string: "FEC9")
+static let loopSyncChar2 = CBUUID(string: "FEA1")
+static let loopSyncChar3 = CBUUID(string: "FEA2")
     static let batteryService   = CBUUID(string: "180F")
     static let batteryChar      = CBUUID(string: "2A19")
     /// Standard Device Information Service — read-only. Used ONLY to tell a WHOOP MG apart from a
